@@ -1,0 +1,14 @@
+{
+  "name": "bot-gamer",
+  "version": "1.0.0",
+  "description": "Bot ☝️😎",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Gabriel",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  }
+}
