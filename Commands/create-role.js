@@ -1,0 +1,11 @@
+module.exports = {
+  name: 'criar-role',
+  description: 'Cria cargo: !criar-role NomeDoCargo',
+  async execute({ message, args }){
+    if(!message.member.permissions.has('ManageRoles')) return message.reply('Você não tem permissão.');
+    const nome = args.join(' ');
+    if(!nome) return message.reply('Use: !criar-role [Nome]');
+    await message.guild.roles.create({ name: nome }).catch(()=> message.reply('Erro ao criar role.'));
+    message.reply(`Cargo ${nome} criado.`);
+  }
+};
